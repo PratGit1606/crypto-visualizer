@@ -1,37 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cryptography Security Visualizer
 
-## Getting Started
+An interactive web application for exploring how different cryptographic systems behave under classical and quantum attack models. This project is designed as part of an honors cybersecurity research initiative, focusing on the future of encryption and post-quantum cryptography.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This tool provides a visual comparison of:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **RSA** (classical encryption, vulnerable to quantum attacks)
+* **ECC (Elliptic Curve Cryptography)** (more efficient than RSA, but still quantum-vulnerable)
+* **Post-Quantum Cryptography** (lattice-based approximations resistant to quantum attacks)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Users can simulate attacker capabilities and observe how security strength degrades across different systems.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Interactive **line chart visualization** of cryptographic strength
+* Toggle for **quantum vs classical attacker models**
+* Adjustable **attacker power slider**
+* Dynamic **explanation panel** interpreting results in real time
+* Clean, modern UI built with Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## How It Works
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application uses simplified mathematical models to approximate cryptographic security:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# crypto-visualizer
+* Security strength is normalized between **0 and 1**
+* As attacker power increases, security decreases
+* Quantum attacks (e.g., Shor’s algorithm) significantly reduce RSA/ECC security
+* Post-quantum methods degrade more slowly under the same conditions
+
+These models are **illustrative**, not exact implementations, and are supported by research discussed in the accompanying paper.
+
+---
+
+## Research Context
+
+This project supports research in:
+
+* Post-Quantum Cryptography (PQC)
+* Quantum computing threats (e.g., Shor’s algorithm)
+* Cryptographic security modeling
+* Visualization for cybersecurity education
+
+The goal is to bridge:
+**theoretical cryptography → practical intuition → visual understanding**
