@@ -87,6 +87,36 @@ export default function Page() {
           eccStrength={metrics.ecc}
           pqStrength={metrics.pq}
         />
+
+        <section className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+          <div className="max-w-4xl space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-700">
+              Call To Action
+            </p>
+            <h2 className="text-2xl font-semibold text-slate-950">
+              Quantum-resistant cryptography starts before quantum computers are
+              common.
+            </h2>
+            <p className="text-sm leading-7 text-slate-600 sm:text-base">
+              Near-future quantum-resistant cryptography will likely look less
+              like a sudden invention and more like a migration period. Systems
+              will increasingly adopt standardized post-quantum algorithms,
+              hybrid deployments that combine classical and post-quantum methods,
+              and infrastructure designed to swap cryptographic components
+              without rebuilding entire platforms.
+            </p>
+            <p className="text-sm leading-7 text-slate-600 sm:text-base">
+              That means preparation does not depend on quantum computers being
+              widely accessible first. Security teams can act now by inventorying
+              where RSA and ECC are used, prioritizing crypto agility,
+              monitoring post-quantum standards, planning certificate and key
+              lifecycle updates, and advocating for migration roadmaps in high-
+              value or long-lived systems. The practical takeaway is simple:
+              organizations should treat post-quantum readiness as a present-day
+              resilience project, not a last-minute response.
+            </p>
+          </div>
+        </section>
       </div>
     </main>
   );
